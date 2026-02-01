@@ -1,0 +1,87 @@
+:root {
+    /* Dull Blue / Slate Theme */
+    --bg-color: #1e293b;       /* Dull slate blue */
+    --card-bg: #334155;       /* Slightly lighter slate for cards */
+    --border-color: #475569;  /* Muted slate border */
+    --text-white: #f8fafc;
+    --text-gray: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.container { padding: 40px 10%; }
+
+/* --- Hero Section & Image Fix --- */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    gap: 40px;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;           /* Added height for circle */
+    object-fit: cover;       /* Prevents stretching */
+    border-radius: 50%;      /* Professional circular look */
+    border: 3px solid #fff;  /* White border for contrast */
+}
+
+/* --- Black & White Buttons --- */
+.btn-outline {
+    background: #ffffff;    /* White button */
+    color: #000000;         /* Black text */
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #000000;    /* Becomes black on hover */
+    color: #ffffff;         /* Becomes white text on hover */
+}
+
+/* --- Grid & Cards --- */
+.grid, .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card, .full-card, .cert-card, .contact-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.pdf-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.pdf-card-link:hover .full-card {
+    border-color: #ffffff;
+    background-color: #1e293b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-gray);
+}
